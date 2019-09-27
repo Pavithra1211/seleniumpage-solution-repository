@@ -1,1 +1,1 @@
-# giveIn-solution-repository
+# seleniumpage-solution-repository for practice
