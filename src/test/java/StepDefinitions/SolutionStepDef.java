@@ -2,17 +2,37 @@ package StepDefinitions;
 
 import Pages.SeleniumPage;
 import TestBase.Base;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
-public class SolutionStepDef {
+
+public class SolutionStepDef extends Base{
 	
-	SeleniumPage page=new SeleniumPage();	
+	public SolutionStepDef()
+	{
+
+	}
+
+	SeleniumPage page;
+
+
+	@Before
+	public void setUP()
+	{
+	Base.intialization();
+
+	page = new SeleniumPage();
+
+
+	}
+
+	
 	
 	@Given("^User opened the application$")
 	public void user_opened_the_application(){
-		Base.intialization();
+		//Base.intialization();
 		page.fnOpenBrowser();
 	    
 	}
@@ -73,7 +93,6 @@ public class SolutionStepDef {
 	public void browser_should_be_closed(){
 	    page.teardown();
 	}
-
 	
 
 }

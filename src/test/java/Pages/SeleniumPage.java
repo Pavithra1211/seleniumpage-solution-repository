@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -15,7 +16,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import TestBase.Base;
-import junit.framework.Assert;
 
 public class SeleniumPage extends Base{	
 	
@@ -27,7 +27,7 @@ public class SeleniumPage extends Base{
 	@FindBy(xpath = "//i/a[contains(text(),'The Periodic Table of Videos')]/following::a[@class='external text']")
 	private WebElement extLinkNational;
 	
-	@FindBy(xpath = "(//ul//a[@class='external text'])[7]")
+	@FindBy(xpath = "(//span[contains(text(),'External links')])[2]//following::ul[2]//li//a[text()='Selenium']")
 	private WebElement extLinkSeleniumThePeriodicVideo;	
 
 	@FindBy(xpath = "//a[@class='external text' and text()='Assay']")

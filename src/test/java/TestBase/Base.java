@@ -18,7 +18,7 @@ public class Base {
 		
 		FileInputStream propfile = null;
 		try {
-			propfile = new FileInputStream("D:/workspace/GiveInSolution/src/test/java/Utilities/Config.properties");
+			propfile = new FileInputStream("D:\\GitProjects\\giveIn-solution-repository\\src\\test\\java\\Utilities\\Config.properties");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -38,10 +38,10 @@ public class Base {
 		String browser=prop.getProperty("browser");
 		
 		if(browser.contentEquals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "D:\\Testing Softwares\\Browser Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\GitProjects\\giveIn-solution-repository\\drivers\\chromedriver.exe");
 			driver=new ChromeDriver();
 		}else if(browser.contentEquals("ie")){
-			System.setProperty("webdriver.chrome.driver", "D:\\Testing Softwares\\Browser Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\GitProjects\\giveIn-solution-repository\\drivers\\chromedriver.exe");
 			 driver=new ChromeDriver();			
 		}else
 			System.out.println("No browser defined");

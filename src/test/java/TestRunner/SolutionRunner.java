@@ -2,18 +2,19 @@ package TestRunner;
 
 import org.junit.runner.RunWith;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "D:/workspace/GiveInSolution/src/test/java/Features/Solution.feature",
+		features = "D:\\GitProjects\\giveIn-solution-repository\\src\\test\\java\\Features\\Solution.feature",
 		glue={"StepDefinitions"},
-		tags={"@Validate_Oxygen_Link_Periodic_Table"},
+		tags={"@Verify_whether_page_is_featured_article,@Take_screenshot_of_righthand_box_elements"},
 		monochrome=false,
 		strict=true,
-		dryRun=false
-		//format={"pretty","html:test-output"}
+		dryRun=false,
+		plugin = {"pretty","html:test-output"}
 		)
 
 
